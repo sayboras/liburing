@@ -6,7 +6,8 @@ libdir ?= $(prefix)/lib
 libdevdir ?= $(prefix)/lib
 
 LIBURING_CFLAGS ?=
-CPPFLAGS ?=
+CXXFLAGS ?=
+CPPFLAGS ?= $(CXXFLAGS)
 override CPPFLAGS += -D_GNU_SOURCE \
 	-Iinclude/ -include ../config-host.h \
 	-D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
